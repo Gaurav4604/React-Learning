@@ -5,7 +5,7 @@ class Message extends Component {
     constructor(){
         super();
         this.state = {
-            message: "Welcome Visitor" // this message is a String enclosed by State object
+            message: "Welcome"  // this message is a String enclosed by State object
         }
     }
 
@@ -15,11 +15,11 @@ class Message extends Component {
         })
     }
 
-  render(props) {
+  render() {
     return (
       <div>
         <h1>
-        {this.state.message}
+        {this.state.message + " " + this.props.name}
         </h1>
         <button onClick ={
             () => this.changeMessage()
