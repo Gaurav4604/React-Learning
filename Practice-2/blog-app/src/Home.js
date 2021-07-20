@@ -1,34 +1,34 @@
-import { useState } from "react";
+import BlogList from "./blogList";
+import useFetch from "./useFetch";
+
+// for faking getting data from the server
+// npx json-server --watch data/db.json --port 8000
 
 // simple functional component
 const Home = () => {
-  const [name, setName] = useState("Gaurav");
-  const [age, setAge] = useState(19);
-  let flag = false;
+  // : is used to rename the object to whatever name we want
+  const {data: blogs, isPending, error} = useFetch("http://localhost:8000/blogs");
+  // the second argument is a dependency array which implies that
+  // useEffect runs only if the data inside the second argument array changes
 
-  const setStuff = () => {
-      console.log(flag);
-    if (flag) {
-      setName("Pramod");
-      setAge(48);
-    } else {
-      setName("Gaurav");
-      setAge(19);
-    }
-    flag = !flag;
-  };
-  const handleClick = () => {
-    setStuff();
-  };
+  // const deleteBlog = (id) => {
+  //   let newBlogs = blogs.filter((blog) => blog.id !== id);
+  //   setBlogs(newBlogs);
+  // }
 
   return (
     <div className="home">
-      <h1>Home Page</h1>
-      <p>
-        Hello I am {name}, my age is {age} years
-      </p>
-      <button onClick={handleClick}>Click Me</button>
-      <br />
+      {
+        error && <div>{error}</div>
+      }
+      {
+        isPending && <div>Loading...</div>
+      }
+      {
+        // checks if the blogs value is a truthy value, only then renders it
+        blogs && <BlogList blogs = {blogs} title = "All Blogs!"/>
+      }
+      {/* <BlogList blogs = {blogs.filter((blog) => blog.author === "blah blah")} title = "Blah Blah's Blogs!" deleteBlog={deleteBlog}/> */}
     </div>
   );
 };
