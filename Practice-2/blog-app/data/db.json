@@ -1,12 +1,6 @@
 {
   "blogs": [
     {
-      "title": "My new Website",
-      "body": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat nostrum vitae dignissimos sit pariatur perspiciatis aliquid fuga maxime. Perferendis nostrum eligendi atque, amet harum soluta ullam autem vero praesentium eos?",
-      "author": "blah blah",
-      "id": 1
-    },
-    {
       "title": "Welcome Party",
       "body": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat nostrum vitae dignissimos sit pariatur perspiciatis aliquid fuga maxime. Perferendis nostrum eligendi atque, amet harum soluta ullam autem vero praesentium eos?",
       "author": "blahhh",
