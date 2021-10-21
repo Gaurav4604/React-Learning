@@ -1,0 +1,19 @@
+.image-list{
+    display: grid;
+    /* the below line states that the columns need to be */
+    /* atleast 250px wide, and the number of columns is autofilled by css */
+    /* 1fr refers to the fact that all columns should be equally sized */
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+
+    grid-gap: 0 10px;
+
+    /* this restricts the row size to the specified value */
+    grid-auto-rows: 10px;
+}
+
+.image-list img{
+    width: 250px;
+    /* this means that the given element will span to 2 cell spaces provided */
+    /* by the grid of the parent element */
+    /* grid-row-end: span 2; */
+}
