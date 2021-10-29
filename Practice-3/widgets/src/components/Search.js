@@ -21,9 +21,7 @@ const Search = () => {
     let timeoutId;
 
     if (term && !results.length) search();
-
-
-    else{
+    else {
       timeoutId = setTimeout(() => {
         if (term) search();
       }, 500);
@@ -32,7 +30,7 @@ const Search = () => {
     return () => {
       clearTimeout(timeoutId);
     };
-  }, [term]);
+  }, [term, results.length]);
   // the second argument defines when to run useEffect
   // empty array means, it runs only at start
   // no args means it runs at every render
