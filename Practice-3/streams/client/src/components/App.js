@@ -15,6 +15,7 @@ const Page2 = () => {
     <div>
       <p>Page 2</p>
       <Link to="/">Navigate to page1</Link>
+      <Link to="/">Navigate to page1</Link>
     </div>
   );
 };
