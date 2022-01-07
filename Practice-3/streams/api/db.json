@@ -1,0 +1,28 @@
+{
+  "streams": [
+    {
+      "title": "Hello there",
+      "description": "This is a new Stream",
+      "userId": "GAURAV PRAMOD SINGH 19BCE2311",
+      "id": 1
+    },
+    {
+      "title": "Router",
+      "description": "This should push me back to the browser home",
+      "userId": "Gaurav Singh",
+      "id": 2
+    },
+    {
+      "title": "Router",
+      "description": "This should push me back to the browser home",
+      "userId": "Gaurav Singh",
+      "id": 3
+    },
+    {
+      "title": "hello",
+      "description": "this change was made by a patch request",
+      "userId": "Gaurav Singh",
+      "id": 4
+    }
+  ]
+}
