@@ -1,12 +1,6 @@
 {
   "streams": [
     {
-      "title": "Hello there",
-      "description": "This is a new Stream",
-      "userId": "GAURAV PRAMOD SINGH 19BCE2311",
-      "id": 1
-    },
-    {
       "title": "Router",
       "description": "This should push me back to the browser home",
       "userId": "Gaurav Singh",
